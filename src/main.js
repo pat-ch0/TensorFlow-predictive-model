@@ -5,13 +5,16 @@
  * @author Atos - 2024-02 <antho.patcho@outlook.fr>
  */
 
+const { CarsPlotter } = require("./cars/cars-plotter")
+
 class Main {
     constructor() {
         this.#bootstrap()
     }
 
-    #bootstrap() {
-        console.log("Hello !")
+    async #bootstrap() {
+        const plot = new CarsPlotter()
+        plot.plot()
     }
 }
 
