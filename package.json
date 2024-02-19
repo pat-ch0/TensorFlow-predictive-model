@@ -1,0 +1,28 @@
+{
+  "name": "car-prediction",
+  "version": "1.0.0",
+  "description": "Training model to predict vehicle consumption vs horse power",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "webpack:build": "webpack",
+    "webpack:dev": "webpack --watch",
+    "webpack:serve": "webpack serve"
+  },
+  "keywords": [
+    "TensorFlow",
+    "JS"
+  ],
+  "author": "Atos <antho.patcho@outlook.fr>",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.0",
+    "webpack": "^5.90.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.2"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.17.0",
+    "@tensorflow/tfjs-vis": "^1.5.1"
+  }
+}
