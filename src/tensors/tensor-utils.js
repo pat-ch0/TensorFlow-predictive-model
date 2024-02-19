@@ -76,5 +76,6 @@ export class TensorUtils {
         // Process training
         await this.trainModel(this.#model, inputs, labels)
         console.log('Training is done')
+        return tensorData
     }
 }

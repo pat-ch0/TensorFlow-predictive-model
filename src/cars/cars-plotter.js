@@ -1,5 +1,6 @@
 import { TensorUtils } from "../tensors/tensor-utils"
 import { SequentialModel } from "../training-models/sequential-model"
+import { TestModel } from "../training-models/test-model"
 import { CarService } from "./cars.service"
 import * as tfvis from '@tensorflow/tfjs-vis'
 
@@ -46,6 +47,10 @@ export class CarsPlotter {
 
         // Train the model
         const trainModel = new TensorUtils(data, sequentialModel)
-        trainModel.run()
+        const trainedData = await trainModel.run()
+
+        // Test model
+        const testModel = new TestModel(sequentialModel, data, trainedData)
+        await testModel.run()
     }
 }

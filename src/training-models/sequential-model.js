@@ -7,7 +7,7 @@ export class SequentialModel {
         // Add first layer
         model.add(tf.layers.dense({
             inputShape: [1],
-            units: 1,
+            units: 3,
             useBias: true
         }))
 
