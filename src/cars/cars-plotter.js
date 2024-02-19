@@ -1,3 +1,4 @@
+import { TensorUtils } from "../tensors/tensor-utils"
 import { SequentialModel } from "../training-models/sequential-model"
 import { CarService } from "./cars.service"
 import * as tfvis from '@tensorflow/tfjs-vis'
@@ -42,5 +43,9 @@ export class CarsPlotter {
             {name: 'Model summary'},
             sequentialModel
         )
+
+        // Train the model
+        const trainModel = new TensorUtils(data, sequentialModel)
+        trainModel.run()
     }
 }
